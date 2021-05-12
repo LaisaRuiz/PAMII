@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'imc',
+    loadChildren: () => import('./pages/imc/imc.module').then( m => m.ImcPageModule)
+  },
 ];
 
 @NgModule({
